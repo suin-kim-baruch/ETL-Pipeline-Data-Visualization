@@ -65,7 +65,7 @@ LYD.L1YR_DR,
 LYD.L1YR_sales,
 LYD.L1M_sales,
 R2.NUM200,
-CASE WHEN T10.KISS IS NOT NULL THEN 'https://ivykiss.com/catalogsearch/result/?q=' + T10.kiss
+CASE WHEN T10.KISS IS NOT NULL THEN 'https://**'+ T10.kiss
 ELSE 'https://www.google.com/search?q=' + T10.upc + '&oq=34264028319&aqs=chrome..69i57.1069j0j9&sourceid=chrome&ie=UTF-8' END AS Hyperlink
 FROM T10 
 	LEFT JOIN LYD ON T10.upc = LYD.UPC 
