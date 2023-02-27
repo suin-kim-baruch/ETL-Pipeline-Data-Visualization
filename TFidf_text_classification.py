@@ -49,7 +49,7 @@ def fn(fpath, desc, upc):
     return df_final
 
 # %%
-# Foxx (C&H beauty)
+#
 df_hst=pd.read_excel(r"Z:\Ivykiss Artwork\ZZ_TEMP\SOM\13_POS\3.RAW\FOXX\FOXX DATA JAN 2023.xlsx", engine='openpyxl')
 df_hst = df_hst.iloc[df_hst[df_hst['Unnamed: 0']=='UPC'].index[0]:, :]
 df_hst.columns=df_hst.iloc[0]
@@ -61,7 +61,7 @@ df_hst.rename(columns={'Description':'d', 'UPC':'u'}, inplace=True)
 df_hst.tail()
 
 # %%
-# KC - new
+#
 def stpassgn(df):
     if df['store'] == 'ARUNDEL':
         return '0011015975'
@@ -123,7 +123,7 @@ df_mi=df_mi[["d","u"]]
 df_mi.head()
 
 # %%
-# Beautopia - new
+#
 path = r"Z:\Ivykiss Artwork\ZZ_TEMP\SOM\13_POS\3.RAW\Beautopia\Beautopia 2023 JAN.xlsx"
 df_bt = pd.read_excel(path)    
 df_bt.columns = df_bt.iloc[0]
@@ -136,7 +136,7 @@ df_bt = df_bt[['d', 'u']]
 df_bt.head(10)
 
 # %%
-# AG 
+# 
 df_ag1=pd.read_excel(r"Z:\Ivykiss Artwork\ZZ_TEMP\SOM\13_POS\3.RAW\AG\JAN_2023_DATA.xlsx", engine='openpyxl')
 df_ag2=pd.read_excel(r"Z:\Ivykiss Artwork\ZZ_TEMP\SOM\13_POS\3.RAW\AG\NOV_DATA_2022.xlsx", engine='openpyxl')
 df_ag3=pd.read_excel(r"Z:\Ivykiss Artwork\ZZ_TEMP\SOM\13_POS\3.RAW\AG\OCT_DATA_2022.xlsx", engine='openpyxl')
@@ -161,7 +161,7 @@ df_bsw.rename(columns={'name':'d', 'UPC':'u'}, inplace=True)
 df_bsw
 
 # %%
-# Charmiss - NJ
+#
 cham=os.listdir(r"Z:\Ivykiss Artwork\ZZ_TEMP\SOM\13_POS\3.RAW\Charmiss")
 df_nj=pd.DataFrame()
 for x in cham:
